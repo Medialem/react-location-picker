@@ -113,7 +113,8 @@ class LocationPicker extends Component {
       radius,
       circleOptions,
       containerElement,
-      mapElement
+      mapElement,
+      mapOptions
     } = this.props;
 
     const { position, shouldRecenterMap } = this.state;
@@ -129,6 +130,7 @@ class LocationPicker extends Component {
         defaultZoom={zoom}
         zoom={zoom}
         shouldRecenterMap={shouldRecenterMap}
+        mapOptions={mapOptions}
       />
     );
   }
@@ -141,7 +143,8 @@ LocationPicker.propTypes = {
   defaultPosition: PropTypes.object.isRequired,
   zoom: PropTypes.number,
   radius: PropTypes.number,
-  circleOptions: PropTypes.object
+  circleOptions: PropTypes.object,
+  mapOptions: PropTypes.object
 };
 
 LocationPicker.defaultProps = {

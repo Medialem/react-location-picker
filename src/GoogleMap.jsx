@@ -16,7 +16,8 @@ const Map = withGoogleMap((props) => {
     radius,
     circleOptions,
     shouldRecenterMap,
-    zoom
+    zoom,
+    mapOptions
   } = props;
 
   const circle = (radius !== -1) ?
@@ -32,6 +33,7 @@ const Map = withGoogleMap((props) => {
       defaultZoom={defaultZoom}
       defaultCenter={position}
       zoom={zoom}
+      {...mapOptions}
       {...mapExtraProps}
     >
 
